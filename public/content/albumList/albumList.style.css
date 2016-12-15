@@ -1,0 +1,28 @@
+.modelContainer {
+    padding: 50px;
+}
+.panel {
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+    min-height: 200px;
+}
+.panel.panel-default {
+    clear: both;
+}
+.panel.panel-default input {
+    width: 125px;
+}
+.panel.panel-default textarea{
+  resize:none;
+  width:280px;
+  height: 150px;
+}
+.btn{
+  float:right;
+  margin-right: 14px;
+  margin-bottom: 5px;
+}
+.modelContainer a{
+  color: white;
+}

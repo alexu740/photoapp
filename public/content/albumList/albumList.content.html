@@ -1,0 +1,38 @@
+<div ng-include="'header.html'"></div>
+<div ng-include="'modal.html'"></div>
+<div class="modelContainer">
+    <p>Search:
+        <input type="text" ng-model="search"></input>
+    </p>
+
+    <div class="panel panel-primary" ng-repeat="album in albums | filter: {name: search} | orderBy: 'date'">
+        <div class="panel-heading">
+            <div style="float:right;">
+                {{album.date}}</div>
+                <a href="/#/album/{{album.name}}">
+            {{album.name}}
+          </a>
+        </div>
+        <div style="padding: 5px;">
+            {{album.desc}}
+        </div>
+    </div>
+    <br/>
+
+    <div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div style="float:right;">
+                    <input placeholder="dd/mm/yyyy" ng-model="newAlbum.date"></input>
+                </div>
+                <input placeholder="name" ng-model="newAlbum.name" ></input>
+            </div>
+            <div style="padding: 5px;">
+                <textarea placeholder="Description" ng-model="newAlbum.desc"></textarea>
+            </div>
+            <button class="btn btn-success" style="margin-bottom: 5px;" ng-click="saveAlbum()">Save</button>
+        </div>
+
+    </div>
+
+</div>
