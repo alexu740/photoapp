@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ui.router'])
+var myApp = angular.module('myApp', ['ui.router', 'angularMoment'])
 myApp.run(function($rootScope) {
     $rootScope.$on("$stateChangeError", console.log.bind(console));
 })
