@@ -1,32 +1,21 @@
 myApp.controller('albumListController', ['$scope', 'albumService', '$http', function($scope, albumService, $http) {
     console.log('albumListController loaded')
-    $scope.getAlbums = () => {
 
-
+    $scope.albums = []
+    $scope.newAlbum = {
+      name: '',
+      date: '',
+      description: ''
     }
-    $scope.initiate = $scope.getAlbums()
+    albumService.getAlbums()
+        .then(res => {
+            $scope.albums = res.data.albums
+            console.log($scope.albums)
+        })
 
     $scope.saveAlbum = () => {
-
-        // $scope.albums.push($scope.newAlbum)
-        // $http({
-        //     method: 'POST',
-        //     url: '/addAlbum/',
-        //     data: {
-        //         album: $scope.newAlbum
-        //     }
-        // })
+        $scope.albums.push($scope.newAlbum)
+        albumService.createAlbum($scope.newAlbum)
         $scope.newAlbum = {}
     }
-
-
-
-    /* $scope.filterValue = function($event) {
-        if (!isNaN(String.fromCharCode($event.keyCode))) {
-            $event.preventDefault();
-        }
-    }
-    ng-keypress="filterValue($event)" directive for use
-    */
-
-}]);
+}])

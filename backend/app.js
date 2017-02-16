@@ -10,17 +10,17 @@ let express = require('express'),
 
 module.exports.init = (dirname) => {
     mongoose.connect()
-
+    app.use(bodyParser.json({
+        limit: '5mb'
+    }))
+    app.use(express.static(dirname))
     mainRouter.get("/", function(req, res) {
         res.sendFile(path.join(dirname + '/index.html'))
     })
     injectRoute(mainRouter)
     console.log(path.join(dirname + '/index.html'))
     app.use(mainRouter)
-    app.use(bodyParser.json({
-        limit: '5mb'
-    }))
-    app.use(express.static(dirname));
+
 }
 
 module.exports.start = () => {

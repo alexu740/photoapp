@@ -4,11 +4,11 @@ let mongoose = require('../../config/mongoose.js').db()
 , ObjectId = Schema.Types.ObjectId
 
 module.exports = new Schema({
-    title: String
+    name: String
     , date: Date
     , description: String
-    , photos: [{
-      type: ObjectId
-      , ref: 'Photo' }
-    ]
+    // , photos: [{
+    //   type: ObjectId
+    //   , ref: 'Photo' }
+    // ]
 })

@@ -1,6 +1,7 @@
-angular.module('myApp', ['ui.router'])
-
-.controller('mainController', function($scope) {
-
-    console.log("mainController loaded")
+var myApp = angular.module('myApp', ['ui.router'])
+myApp.run(function($rootScope) {
+    $rootScope.$on("$stateChangeError", console.log.bind(console));
 })
+myApp.controller('mainController', ['$scope', '$state', function($scope, $state) {
+        console.log("mainController loaded")
+    }])

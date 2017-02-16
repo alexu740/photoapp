@@ -1,9 +1,10 @@
 
 module.exports.app = {
-  port: 9010
+  port: 9001
 }
 module.exports.db = {
-  server: 'localhost'
-  , port: 27017
-  , database: 'photoAlbum'
+  user: 'alex'
+  , password: 'alex'
+  , port: 51059
+  , database: 'photoapp'
 }
