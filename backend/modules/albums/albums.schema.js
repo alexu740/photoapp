@@ -5,7 +5,7 @@ let mongoose = require('../../config/mongoose.js').db()
 
 module.exports = new Schema({
     name: String
-    , date: Date
+    , date: Number
     , description: String
     // , photos: [{
     //   type: ObjectId
