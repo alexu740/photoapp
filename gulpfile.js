@@ -54,6 +54,8 @@ gulp.task('buildhtml', function() {
 
 gulp.task('watch', function() {
     gulp.watch(['public/**/*.js', '!public/**/*.min.js'], ['lintjs', 'buildjs'])
+    gulp.watch(['public/**/*.scss'], ['buildcss'])
+    gulp.watch(['public/**/*.html'], ['buildhtml'])
 })
 gulp.task('build', function() {
   runSequence('lintjs', ['buildjs', 'buildcss', 'buildhtml'], 'watch')
