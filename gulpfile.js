@@ -33,7 +33,8 @@ gulp.task('buildjs', function() {
 gulp.task('lintjs', function() {
     return gulp.src('public/**/*.js')
         .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'))
 })
 
 gulp.task('buildcss', function() {
@@ -58,6 +59,6 @@ gulp.task('watch', function() {
     gulp.watch(['public/**/*.html'], ['buildhtml'])
 })
 gulp.task('build', function() {
-  runSequence('lintjs', ['buildjs', 'buildcss', 'buildhtml'], 'watch')
+    runSequence('lintjs', ['buildjs', 'buildcss', 'buildhtml'], 'watch')
 })
 gulp.task('default', ['build'])

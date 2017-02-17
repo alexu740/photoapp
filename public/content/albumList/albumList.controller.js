@@ -14,14 +14,13 @@ myApp.controller('albumListController', ['$scope', 'albumService', '$http', 'mom
     albumService.getAlbums()
         .then(res => {
             $scope.albums = res.data.albums.map(album => {
-              album.date = moment.unix(album.date).format('YYYY-MM-DD', 'X')
-              return album
+                album.date = moment.unix(album.date).format('YYYY-MM-DD', 'X')
+                return album
             })
         })
 
     $scope.saveAlbum = () => {
         $scope.albums.push($scope.newAlbum)
-        //$scope.newAlbum.date = moment($scope.newAlbum.date).unix()
         albumService.createAlbum($scope.newAlbum)
         $scope.newAlbum = {}
     }
