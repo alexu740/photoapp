@@ -1,6 +1,6 @@
 
 module.exports.app = {
-  port: 9001
+  port: 9010
 }
 module.exports.db = {
   user: 'alex'
