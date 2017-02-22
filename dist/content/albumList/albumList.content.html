@@ -8,29 +8,29 @@
         <div class="panel-heading">
             <div style="float:right;">
                 {{album.date}}</div>
-            <a href="/#/album/{{album.name}}">
+            <a ui-sref='album'>
             {{album.name}}
           </a>
         </div>
-        <div style="padding: 5px;">
+        <div style="padding: 5px; ">
             {{album.description}}
         </div>
     </div>
     <br/>
 
     <div>
-        <div class="panel panel-default">
-            <form novalidate name="newAlbumForm" ng-submit="saveAlbum()">
-                <div class="panel-heading">
-                    <div style="float:right;">
-                        <input placeholder="yyyy-mm-dd" ng-model="newAlbum.date" required au-date-mask="{{newAlbum.date}}"></input>
+        <div class="panel panel-default ">
+            <form novalidate name="newAlbumForm " ng-submit="saveAlbum() ">
+                <div class="panel-heading ">
+                    <div style="float:right; ">
+                        <input placeholder="yyyy-mm-dd " ng-model="newAlbum.date " required au-date-mask="{{newAlbum.date}} "></input>
                     </div>
-                    <input placeholder="name" ng-model="newAlbum.name" required></input>
+                    <input placeholder="name " ng-model="newAlbum.name " required></input>
                 </div>
-                <div style="padding: 5px;">
-                    <textarea placeholder="Description" ng-model="newAlbum.description" required></textarea>
+                <div style="padding: 5px; ">
+                    <textarea placeholder="Description " ng-model="newAlbum.description " required></textarea>
                 </div>
-                <input type="submit" ng-disabled="newAlbumForm.$invalid" class="btn btn-success" style="margin-bottom: 5px;" value="Save" />
+                <input type="submit " ng-disabled="newAlbumForm.$invalid " class="btn btn-success " style="margin-bottom: 5px; " value="Save " />
             </form>
         </div>
 
