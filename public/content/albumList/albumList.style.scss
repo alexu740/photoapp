@@ -26,3 +26,17 @@
 .modelContainer a{
   color: white;
 }
+
+.ng-invalid-date-mask{
+  border-width: 3px;
+  border-color: red;
+}
+
+.ng-valid-date-mask {
+  border-width: 3px;
+  border-color: green;
+}
+.ng-empty {
+  border-color: black;
+  border-width: 1px;
+}

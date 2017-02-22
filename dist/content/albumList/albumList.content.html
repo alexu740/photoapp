@@ -25,10 +25,10 @@
                     <div style="float:right;">
                         <input placeholder="yyyy-mm-dd" ng-model="newAlbum.date" required au-date-mask="{{newAlbum.date}}"></input>
                     </div>
-                    <input placeholder="name" ng-model="newAlbum.name"></input>
+                    <input placeholder="name" ng-model="newAlbum.name" required></input>
                 </div>
                 <div style="padding: 5px;">
-                    <textarea placeholder="Description" ng-model="newAlbum.description"></textarea>
+                    <textarea placeholder="Description" ng-model="newAlbum.description" required></textarea>
                 </div>
                 <input type="submit" ng-disabled="newAlbumForm.$invalid" class="btn btn-success" style="margin-bottom: 5px;" value="Save" />
             </form>
