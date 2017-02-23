@@ -1,5 +1,4 @@
-<div ng-include="'modal.html'"></div>
-<div class="modelContainer">
+<div class="albumListContainer">
     <p>Search:
         <input type="text" ng-model="search"></input>
     </p>
@@ -30,7 +29,7 @@
                 <div style="padding: 5px; ">
                     <textarea placeholder="Description " ng-model="newAlbum.description " required></textarea>
                 </div>
-                <input type="submit " ng-disabled="newAlbumForm.$invalid " class="btn btn-success " style="margin-bottom: 5px; " value="Save " />
+                <input type="submit " ng-disabled="newAlbumForm.$invalid " class="btn btn-success" style="margin-bottom: 5px; " value="Save " />
             </form>
         </div>
 

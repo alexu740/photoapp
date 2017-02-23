@@ -1,42 +1,49 @@
-.modelContainer {
+.albumListContainer {
     padding: 50px;
-}
-.panel {
-    float: left;
-    width: 300px;
-    margin-right: 10px;
-    min-height: 200px;
-}
-.panel.panel-default {
-    clear: both;
-}
-.panel.panel-default input {
-    width: 125px;
-}
-.panel.panel-default textarea{
-  resize:none;
-  width:280px;
-  height: 150px;
-}
-.btn{
-  float:right;
-  margin-right: 14px;
-  margin-bottom: 5px;
-}
-.modelContainer a{
-  color: white;
-}
 
-.ng-invalid-date-mask{
-  border-width: 3px;
-  border-color: red;
-}
+    .panel {
+        float: left;
+        width: 300px;
+        margin-right: 10px;
+        min-height: 200px;
+    }
 
-.ng-valid-date-mask {
-  border-width: 3px;
-  border-color: green;
-}
-.ng-empty {
-  border-color: black;
-  border-width: 1px;
+    .panel.panel-default {
+        clear: both;
+    }
+
+    .panel.panel-default input {
+        width: 125px;
+    }
+
+    .panel.panel-default textarea {
+        resize: none;
+        width: 280px;
+        height: 150px;
+    }
+
+    .btn {
+        float: right;
+        margin-right: 14px;
+        margin-bottom: 5px;
+    }
+
+    .modelContainer a {
+        color: white;
+    }
+
+    .ng-invalid-date-mask {
+        border-width: 3px;
+        border-color: red;
+    }
+
+    .ng-valid-date-mask {
+        border-width: 3px;
+        border-color: green;
+    }
+
+    .ng-empty {
+        border-color: black;
+        border-width: 1px;
+    }
 }

@@ -20,7 +20,6 @@ angular.module('myApp')
                             Number(day) <= 31 &&
                             Number(day) > 0
                     }
-
                 })
             }
         }

@@ -1,0 +1,11 @@
+<div class="panel panel-default" style="width: 300px;">
+    <form name="forms" ng-submit="uploadFiles()" class="panel-heading">
+        <input id="image-input" type="file" name="file" ng-files="getTheFiles($files)" required></input>
+        <p>Description:
+        </p>
+        <textarea id="description" ng-model="textarea" form="forms" required></textarea>
+        <br/>
+        <image ng-if="image" ng-src="{{image}}"></image>
+        <input type="submit" class="btn btn-primary" value="Upload"></input>
+    </form>
+</div>
