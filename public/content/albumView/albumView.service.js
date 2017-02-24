@@ -1,9 +1,9 @@
 myApp.service('albumViewService', ['$http', function($http) {
 
-    this.uploadFiles = (image) => {
+    this.uploadImage = (image) => {
         return $http({
             method: 'POST',
-            url: '/addPhoto/test3',
+            url: '/photos/' + 'id',
             data: {
                 image: image
             }

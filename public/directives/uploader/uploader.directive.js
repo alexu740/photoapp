@@ -2,8 +2,9 @@ angular.module('myApp')
     .directive('auUploadButton', ['albumViewService', function(albumViewService) {
         return {
             restrict: 'E',
+            require: '?ngModel',
             templateUrl: './directives/uploader/uploader.content.html',
-            link: function(scope, element, attrs) {
+            link: function(scope, element, attrs, ngModel) {
                 scope.textarea = ""
                 scope.getTheFiles = ($files) => {
                     scope.image = $files[0]

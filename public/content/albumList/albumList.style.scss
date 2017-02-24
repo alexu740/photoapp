@@ -1,11 +1,29 @@
 .albumListContainer {
     padding: 50px;
 
+    a {
+        color: white;
+    }
+
     .panel {
         float: left;
         width: 300px;
         margin-right: 10px;
         min-height: 200px;
+
+        .panel-heading {
+            .albumDate {
+                float: right;
+            }
+        }
+
+        .albumDescription {
+            padding: 5px;
+        }
+
+        .btn {
+            margin-bottom: 5px;
+        }
     }
 
     .panel.panel-default {

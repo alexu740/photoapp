@@ -22,6 +22,10 @@ myApp.controller('albumListController', ['$scope', 'albumService', '$http', 'mom
     $scope.saveAlbum = () => {
         $scope.albums.push($scope.newAlbum)
         albumService.createAlbum($scope.newAlbum)
-        $scope.newAlbum = {}
+        $scope.newAlbum = {
+            name: '',
+            date: '',
+            description: ''
+        }
     }
 }])

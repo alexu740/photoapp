@@ -5,31 +5,31 @@
 
     <div class="panel panel-primary" ng-repeat="album in albums | filter: {name: search} | orderBy: 'date'">
         <div class="panel-heading">
-            <div style="float:right;">
+            <div class="albumDate">
                 {{album.date}}</div>
             <a ui-sref='album'>
             {{album.name}}
           </a>
         </div>
-        <div style="padding: 5px; ">
+        <div class="albumDescription">
             {{album.description}}
         </div>
     </div>
     <br/>
 
     <div>
-        <div class="panel panel-default ">
+        <div class="panel panel-default">
             <form novalidate name="newAlbumForm " ng-submit="saveAlbum() ">
-                <div class="panel-heading ">
-                    <div style="float:right; ">
-                        <input placeholder="yyyy-mm-dd " ng-model="newAlbum.date " required au-date-mask="{{newAlbum.date}} "></input>
+                <div class="panel-heading">
+                    <div class="albumDate">
+                        <input placeholder="yyyy-mm-dd " ng-model="newAlbum.date " required au-date-mask="{{newAlbum.date}}"></input>
                     </div>
                     <input placeholder="name " ng-model="newAlbum.name " required></input>
                 </div>
-                <div style="padding: 5px; ">
-                    <textarea placeholder="Description " ng-model="newAlbum.description " required></textarea>
+                <div class="albumDescription">
+                    <textarea placeholder="Description" ng-model="newAlbum.description" required></textarea>
                 </div>
-                <input type="submit " ng-disabled="newAlbumForm.$invalid " class="btn btn-success" style="margin-bottom: 5px; " value="Save " />
+                <button type="submit" ng-disabled="newAlbumForm.$invalid " class="btn btn-success" value="Save">Save</button>
             </form>
         </div>
 

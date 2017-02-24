@@ -11,9 +11,9 @@ angular.module('myApp')
                             day = value.substring(8, 10)
 
                         return value.length == 10 &&
-                            !/[^0-9\/]/.test(value) &&
-                            value.substring(4, 5) == '/' &&
-                            value.substring(7, 8) == '/' &&
+                            !/[^0-9\-]/.test(value) &&
+                            value.substring(4, 5) == '-' &&
+                            value.substring(7, 8) == '-' &&
                             Number(year) > 1970 &&
                             Number(month) <= 12 &&
                             Number(month) > 0 &&

@@ -1,12 +1,14 @@
-<div>
-    <div class="row">
-        <div class="col-md-3" style="float:left; margin-left: 50px; width: 250px;">
-            <a class="thumbnail">
-                <!--  <img ng-src="{{photos}}"> -->
-            </a>
+<div class="albumViewContainer">
+    <div>
+        <div ng-repeat="photo in photos">
+            <div class="photoBox">
+                <a class="thumbnail">
+                    <img ng-src="{{photo}}">
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <au-upload-button/>
+    <div class="row">
+        <au-upload-button/>
+    </div>
 </div>
