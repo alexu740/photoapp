@@ -3,5 +3,15 @@
         float: left;
         margin-left: 50px;
         width: 250px;
+        height: 300px;
+
+        .description1 {
+            overflow: scroll;
+        }
+
+        a {
+            margin: 0;
+            max-height: 238px;
+        }
     }
 }

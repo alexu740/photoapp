@@ -4,8 +4,7 @@ let mongoose = require('../../config/mongoose.js').db()
 , ObjectId = mongoose.ObjectId
 
 module.exports = new Schema({
-    title: String
-    , date: Date
+    album_id: String
     , description: String
     , image: String
 })

@@ -1,10 +1,14 @@
 <div class="albumViewContainer">
-    <div>
+    <div class="row">
         <div ng-repeat="photo in photos">
-            <div class="photoBox">
+            <div class="photoBox panel panel-primary">
                 <a class="thumbnail">
-                    <img ng-src="{{photo}}">
+                    <img ng-src="{{photo.image}}">
                 </a>
+                <div class="description">
+                <b>Description:</b>
+                <p>{{photo.description}}</p>
+              </div>
             </div>
         </div>
     </div>

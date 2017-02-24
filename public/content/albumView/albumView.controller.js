@@ -1,11 +1,13 @@
-myApp.controller('albumViewController', ['$scope', 'albumService', function($scope, albumService) {
+myApp.controller('albumViewController', ['$scope', 'albumViewService', '$stateParams', function($scope, albumViewService, $stateParams) {
 
-    //  $scope.album = $routeParams.album_name
-    $scope.photos = {}
-    // $scope.check = albumService.getPhotos($routeParams.album_name).then(result => {
-    //     console.log(result.data)
-    //   //  $scope.photos = result.data[1]
-    // })
+$scope.photos = {}
+albumViewService.getImages($stateParams.id)
+    .then(res => {
+        console.log(res.data.photos)
+        $scope.photos = res.data.photos
+    })
+
+
 
 
 }])

@@ -10,4 +10,11 @@ myApp.service('albumViewService', ['$http', function($http) {
         })
     }
 
+    this.getImages = (id) => {
+        return $http({
+            method: 'GET',
+            url: '/photos/' + id
+        })
+    }
+
 }])

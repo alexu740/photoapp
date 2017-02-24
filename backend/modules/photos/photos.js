@@ -9,9 +9,24 @@ let Photos = require('./photos.model'),
 
 module.exports = {
     post: (req, res) => {
+      let id = req.params.id
+      let album = req.body.image
+      let photo = {
+        album_id: req.params.id,
+        description: req.body.image.description
+        , image: req.body.image.image
+      }
+      Photos.create(photo)
+      .then(photo => {
 
+      })
     },
     get: (req, res) => {
-
+        Photos.find({'album_id': req.params.id})
+        .then(result => {
+          res.json({
+              'photos': result
+          })
+        })
     }
 }
