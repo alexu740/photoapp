@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .directive('auUploadButton', ['albumViewService', function(albumViewService) {
+    .directive('auUploadButton', ['albumViewService','$stateParams', function(albumViewService, $stateParams) {
         return {
             restrict: 'E',
             require: '?ngModel',
@@ -22,7 +22,7 @@ angular.module('myApp')
                         image: scope.image,
                         description: scope.textarea
                     }
-                    albumViewService.uploadImage(scope.photo)
+                    albumViewService.uploadImage(scope.photo, $stateParams.id)
                     scope.image = null
                     scope.textarea = ""
                     scope.element[0].value = ""
