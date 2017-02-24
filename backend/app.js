@@ -5,8 +5,9 @@ let express = require('express'),
     mainRouter = express.Router(),
     config = require('./config/config'),
     path = require('path'),
-    bodyParser = require('body-parser')
-    , injectRoute = require('./modules/albums/albums.routes.js')
+    bodyParser = require('body-parser'),
+    albumRouter = require('./modules/albums/albums.routes.js'),
+    photoRouter = require('./modules/photos/photos.routes.js')
 
 module.exports.init = (dirname) => {
     mongoose.connect()
@@ -17,10 +18,10 @@ module.exports.init = (dirname) => {
     mainRouter.get("/", function(req, res) {
         res.sendFile(path.join(dirname + '/index.html'))
     })
-    injectRoute(mainRouter)
+    albumRouter(mainRouter)
+    photoRouter(mainRouter)
     console.log(path.join(dirname + '/index.html'))
     app.use(mainRouter)
-
 }
 
 module.exports.start = () => {
