@@ -1,0 +1,49 @@
+.albumListContainer {
+  padding: 50px; }
+  .albumListContainer a {
+    color: white; }
+  .albumListContainer .panel {
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+    min-height: 200px; }
+    .albumListContainer .panel .panel-heading .albumDate {
+      float: right; }
+    .albumListContainer .panel .albumDescription {
+      padding: 5px; }
+    .albumListContainer .panel .btn {
+      margin-bottom: 5px; }
+  .albumListContainer .panel.panel-default {
+    clear: both; }
+  .albumListContainer .panel.panel-default input {
+    width: 125px; }
+  .albumListContainer .panel.panel-default textarea {
+    resize: none;
+    width: 280px;
+    height: 150px; }
+  .albumListContainer .btn {
+    float: right;
+    margin-right: 14px;
+    margin-bottom: 5px; }
+  .albumListContainer .modelContainer a {
+    color: white; }
+  .albumListContainer .ng-invalid-date-mask {
+    border-width: 3px;
+    border-color: red; }
+  .albumListContainer .ng-valid-date-mask {
+    border-width: 3px;
+    border-color: green; }
+  .albumListContainer .ng-empty {
+    border-color: black;
+    border-width: 1px; }
+
+.albumViewContainer .photoBox {
+  float: left;
+  margin-left: 50px;
+  width: 250px;
+  height: 300px; }
+  .albumViewContainer .photoBox .description1 {
+    overflow: scroll; }
+  .albumViewContainer .photoBox a {
+    margin: 0;
+    max-height: 238px; }

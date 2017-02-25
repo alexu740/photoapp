@@ -15,7 +15,6 @@ module.exports.init = (dirname) => {
         limit: '5mb'
     }))
     app.use(express.static(dirname))
-    app.use(express.static(path.join(dirname + '/css')))
     mainRouter.get("/", function(req, res) {
         console.log("Index requested")
         res.sendFile(path.join(dirname + '/index.html'))

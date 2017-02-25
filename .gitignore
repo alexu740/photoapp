@@ -8,10 +8,6 @@ scripts/test.js
 # Apple socks.
 .DS_Store
 
-##
-# Ignore literally all CSS files.
-##
-*.css
 
 ##
 # Ignore compiled frontend app
