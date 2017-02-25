@@ -14,6 +14,7 @@ module.exports.init = (dirname) => {
     app.use(bodyParser.json({
         limit: '5mb'
     }))
+    app.use(express.static(dirname))
     app.use(express.static(path.join(dirname + '/css')))
     mainRouter.get("/", function(req, res) {
         console.log("Index requested")
