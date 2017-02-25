@@ -14,7 +14,7 @@ module.exports.init = (dirname) => {
     app.use(bodyParser.json({
         limit: '5mb'
     }))
-    app.use(express.static(dirname))
+    app.use(express.static(path.join(dirname + '/css')))
     mainRouter.get("/", function(req, res) {
         console.log("Index requested")
         res.sendFile(path.join(dirname + '/index.html'))
@@ -22,7 +22,6 @@ module.exports.init = (dirname) => {
     albumRouter(mainRouter)
     photoRouter(mainRouter)
     console.log(path.join(dirname + '/index.html'))
-    app.use(express.static(__dirname))
     app.use(mainRouter)
 }
 
