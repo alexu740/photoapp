@@ -22,10 +22,11 @@ module.exports.init = (dirname) => {
     albumRouter(mainRouter)
     photoRouter(mainRouter)
     console.log(path.join(dirname + '/index.html'))
+    app.use(express.static(path.join(__dirname)))
     app.use(mainRouter)
 }
 
 module.exports.start = () => {
     console.log("Application starting 1.0.0 on port: " + config.app.port)
-    app.listen(config.app.port)
+    app.listen(config.app.port, '0.0.0.0')
 }
