@@ -22,7 +22,7 @@ module.exports.init = (dirname) => {
     albumRouter(mainRouter)
     photoRouter(mainRouter)
     console.log(path.join(dirname + '/index.html'))
-    app.use(express.static(path.join(__dirname)))
+    app.use(express.static(__dirname))
     app.use(mainRouter)
 }
 
