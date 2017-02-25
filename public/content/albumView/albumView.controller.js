@@ -6,8 +6,4 @@ albumViewService.getImages($stateParams.id)
         console.log(res.data.photos)
         $scope.photos = res.data.photos
     })
-
-
-
-
 }])

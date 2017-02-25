@@ -16,6 +16,7 @@ module.exports.init = (dirname) => {
     }))
     app.use(express.static(dirname))
     mainRouter.get("/", function(req, res) {
+        console.log("Index requested")
         res.sendFile(path.join(dirname + '/index.html'))
     })
     albumRouter(mainRouter)
@@ -25,6 +26,6 @@ module.exports.init = (dirname) => {
 }
 
 module.exports.start = () => {
-    console.log("Application starting 1.0.0")
+    console.log("Application starting 1.0.0 on port: " + config.app.port)
     app.listen(config.app.port)
 }
