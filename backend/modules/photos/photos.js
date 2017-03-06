@@ -2,23 +2,22 @@
 
 let Photos = require('./photos.model'),
     moment = require('moment')
-
+    , path = require('path')
+    , fs = require('fs')
+  //  , parsedURL = require('parsed-data-url')
 // converting moment to unix and viceversa
 // let a = moment('2017-05-02').unix()
 // let b = moment.unix(a).format('YYYY-MM-DD', 'X')
 
 module.exports = {
     post: (req, res) => {
-      let id = req.params.id
-      let album = req.body.image
       let photo = {
         album_id: req.params.id,
         description: req.body.image.description
-        , image: req.body.image.image
       }
       Photos.create(photo)
       .then(photo => {
-
+        fs.writeFile('backend/photos/' + photo._id + ".jpg", new Buffer(req.body.image.image.split(",")[1], 'base64'))
       })
     },
     get: (req, res) => {

@@ -3,7 +3,6 @@ myApp.controller('albumViewController', ['$scope', 'albumViewService', '$statePa
 $scope.photos = {}
 albumViewService.getImages($stateParams.id)
     .then(res => {
-        console.log(res.data.photos)
         $scope.photos = res.data.photos
     })
 }])

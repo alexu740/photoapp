@@ -15,6 +15,7 @@ module.exports.init = (dirname) => {
         limit: '5mb'
     }))
     app.use(express.static(dirname))
+    app.use('/img', express.static(path.join(__dirname + '/photos')))
     mainRouter.get("/", function(req, res) {
         console.log("Index requested")
         res.sendFile(path.join(dirname + '/index.html'))

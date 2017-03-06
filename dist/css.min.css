@@ -1,3 +1,14 @@
+.albumViewContainer .photoBox {
+  float: left;
+  margin-left: 50px;
+  width: 250px;
+  height: 300px; }
+  .albumViewContainer .photoBox .description1 {
+    overflow: scroll; }
+  .albumViewContainer .photoBox a {
+    margin: 0;
+    max-height: 238px; }
+
 .albumListContainer {
   padding: 50px; }
   .albumListContainer a {
@@ -36,14 +47,3 @@
   .albumListContainer .ng-empty {
     border-color: black;
     border-width: 1px; }
-
-.albumViewContainer .photoBox {
-  float: left;
-  margin-left: 50px;
-  width: 250px;
-  height: 300px; }
-  .albumViewContainer .photoBox .description1 {
-    overflow: scroll; }
-  .albumViewContainer .photoBox a {
-    margin: 0;
-    max-height: 238px; }

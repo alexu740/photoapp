@@ -8,7 +8,8 @@ scripts/test.js
 # Apple socks.
 .DS_Store
 
-
+backend/photos
+*.img
 ##
 # Ignore compiled frontend app
 ##
